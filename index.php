@@ -6,13 +6,16 @@
 <head>
       <title>Car Info</title>
    </head>
+   <h1 align="center">CAR INFO</h1>
+   
+<input type="button" value="GET DATA" onClick="location.href=location.href">
 <?php
 if ($result->num_rows > 0) {
   // Show each data returned by mysql
   while($row = $result->fetch_assoc()) {
 ?>
 
-	<!-- USING HTML HERE : Here I am using php within html tags -->
+
   <table width="400" border="2" cellpadding="2" cellspacing='1' align="center">
 
            <tr bgcolor="#2ECCFA">
