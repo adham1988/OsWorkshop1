@@ -13,11 +13,6 @@ try:
 
     cursor = connection.cursor()
 
-
-
-
-
-
     result = cursor.execute(mySql_insert_query, Data)
     connection.commit()
     print("Date Record inserted successfully")
