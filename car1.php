@@ -1,18 +1,34 @@
 <?php
-    include_once 'db.php';
+
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "CarInfo";
+
+// Creating mysql connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Checking mysql connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Writing a mysql query to retrieve data
+$sql = "SELECT * FROM car WHERE carID = 1";
+$result = $conn->query($sql);
 ?>
 
 <html>
 <head>
       <title>Car Info</title>
    </head>
-    <h1 align="center">CAR INFO</h1>
+    <h1 align="center">CAR ID 1</h1>
 
 
-   <table width="420" border="2" cellpadding="2" cellspacing='1' align="center">
+   <table width="400" border="2" cellpadding="2" cellspacing='1' align="center">
 
             <tr bgcolor="#2ECCFA">
-                      <th> CarID</th>
+                     
                       <th>Position X/Y</th>
                       <th> Speed</th>
                       <th>Time</th>
@@ -21,11 +37,8 @@
 
 <input type="button" value="GET DATA"  onClick="location.href=location.href"  style="float: right;>
 
-<div id="button"><a href="car1.php">Car ID = 1</a></div>
-<br></br>
-<div id="button"><a href="car2.php">Car ID = 2</a></div>
-<br></br>
-<div id="button"><a href="car3.php">Car ID = 3</a></div>
+<div id="button"><a href="index.php">HOME</a></div>
+
 <?php
 if ($result->num_rows > 0) {
   // Show each data returned by mysql
@@ -33,15 +46,16 @@ if ($result->num_rows > 0) {
 ?>
 
 
-  <table width="420" border="2" cellpadding="2" cellspacing='1' align="center">
+  <table width="480" border="2" cellpadding="2" cellspacing='1' align="center">
 
 
 <?php
            echo "<tr>";
-              echo "<td>".$row['carID'],"</td>";
+           
               echo "<td>".$row['position'],"</td>";
               echo "<td>".$row['speed'],"</td>";
               echo "<td>".$row['time'],"</td>";
+
 
           echo "</tr>";
 	?>
@@ -57,3 +71,4 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 </html>
+
