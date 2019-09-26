@@ -30,7 +30,6 @@ $result = $conn->query($sql);
             <tr bgcolor="#2ECCFA">
 
                       <th>Position X/Y</th>
-                      <th> Speed</th>
                       <th>Time</th>
 
             </tr>
@@ -38,8 +37,7 @@ $result = $conn->query($sql);
 <input type="button" value="GET DATA"  onClick="location.href=location.href"  style="float: right;>
 
 <div id="button"><a href="index.php">HOME</a></div>
-<br></br>
-<div id="button"><a href="averagecar2.php">AVG</a></div>
+
 
 <?php
 if ($result->num_rows > 0) {
@@ -55,7 +53,6 @@ if ($result->num_rows > 0) {
            echo "<tr>";
 
               echo "<td>".$row['position'],"</td>";
-              echo "<td>".$row['speed'],"</td>";
               echo "<td>".$row['time'],"</td>";
 
           echo "</tr>";

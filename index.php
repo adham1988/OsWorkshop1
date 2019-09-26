@@ -14,7 +14,6 @@
             <tr bgcolor="#2ECCFA">
                       <th> CarID</th>
                       <th>Position X/Y</th>
-                      <th> Speed</th>
                       <th>Time</th>
 
             </tr>
@@ -40,7 +39,6 @@ if ($result->num_rows > 0) {
            echo "<tr>";
               echo "<td>".$row['carID'],"</td>";
               echo "<td>".$row['position'],"</td>";
-              echo "<td>".$row['speed'],"</td>";
               echo "<td>".$row['time'],"</td>";
 
           echo "</tr>";
