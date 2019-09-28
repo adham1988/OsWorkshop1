@@ -29,8 +29,9 @@ $result = $conn->query($sql);
 
             <tr bgcolor="#2ECCFA">
 
-                      <th>Position X/Y</th>
-                      <th>Time</th>
+              <th>[X]</th>
+              <th>[Y]</th>
+              <th>Time</th>
 
             </tr>
 
@@ -52,8 +53,9 @@ if ($result->num_rows > 0) {
 <?php
            echo "<tr>";
 
-              echo "<td>".$row['position'],"</td>";
-              echo "<td>".$row['time'],"</td>";
+           echo "<td>".$row['[x]'],"</td>";
+           echo "<td>".$row['[y]'],"</td>";
+           echo "<td>".$row['time'],"</td>";
 
           echo "</tr>";
 	?>
