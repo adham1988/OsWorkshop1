@@ -7,13 +7,13 @@ import time
 while True:
 
     try:
-        print("ha00")
-        connection = mysql.connector.connect(host='192.168.1.158',
+
+        connection = mysql.connector.connect(host='192.168.1.152',
                                              database='CarInfo',
                                              user='username',
                                              password='password')
 
-        mySql_insert_query = """INSERT INTO car (carID, position, speed, time) 
+        mySql_insert_query = """INSERT INTO car (carID, x, y, time) 
                                 VALUES (%s, %s, %s, %s) """
 
         cursor = connection.cursor()
@@ -30,5 +30,6 @@ while True:
         if (connection.is_connected()):
             cursor.close()
             connection.close()
-            print("MySQL connection is closed")
-    time.sleep(4)
+            print(genData)
+    time.sleep(3)
+

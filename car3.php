@@ -53,8 +53,8 @@ if ($result->num_rows > 0) {
 <?php
            echo "<tr>";
 
-           echo "<td>".$row['[x]'],"</td>";
-           echo "<td>".$row['[y]'],"</td>";
+           echo "<td>".$row['x'],"</td>";
+           echo "<td>".$row['y'],"</td>";
            echo "<td>".$row['time'],"</td>";
 
           echo "</tr>";
