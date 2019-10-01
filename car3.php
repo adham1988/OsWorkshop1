@@ -38,6 +38,7 @@ $result = $conn->query($sql);
 <input type="button" value="GET DATA"  onClick="location.href=location.href"  style="float: right;>
 
 <div id="button"><a href="index.php">HOME</a></div>
+<div id="button"><a href="graph3.php">graph</a></div>
 
 
 <?php
